@@ -29,6 +29,14 @@ export default function App() {
       ) : (
         <SetupForm onSubmit={setCandidates} />
       )}
+
+      <br />
+
+      <Typography>
+        <Link href="https://github.com/nickmccurdy/bisect">
+          Source on GitHub
+        </Link>
+      </Typography>
     </Container>
   )
 }
