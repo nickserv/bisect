@@ -14,6 +14,12 @@ jobs:
       - name: Install
         run: yarn
 
+      - name: Format
+        run: yarn types
+
+      - name: Types
+        run: yarn types
+
       - name: Build
         run: yarn build
 
