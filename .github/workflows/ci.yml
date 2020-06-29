@@ -13,7 +13,7 @@ jobs:
         run: yarn
 
       - name: Format
-        run: yarn types
+        run: yarn format
 
       - name: Types
         run: yarn types
