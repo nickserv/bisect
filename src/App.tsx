@@ -1,4 +1,5 @@
 import { Container, Link, Typography } from "@material-ui/core"
+import { CallSplit } from "@material-ui/icons"
 import React, { useState } from "react"
 import "typeface-roboto"
 import Bisect from "./Bisect"
@@ -10,7 +11,7 @@ export default function App() {
   return (
     <Container maxWidth="sm">
       <Typography variant="h4" component="h1">
-        Bisect
+        <CallSplit /> Bisect
       </Typography>
       <Typography gutterBottom>
         An interactive GUI for binary searches. Inspired by{" "}
