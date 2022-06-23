@@ -26,4 +26,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           branch: gh-pages
-          folder: dist
+          folder: build
