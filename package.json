@@ -13,6 +13,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "prettier": "^2.0.5",
+    "prettier-config-nick": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -43,7 +44,5 @@
     ]
   },
   "homepage": ".",
-  "prettier": {
-    "semi": false
-  }
+  "prettier": "prettier-config-nick"
 }
