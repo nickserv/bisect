@@ -8,7 +8,6 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
     "format": "prettier --check ."
   },
   "dependencies": {
@@ -21,26 +20,18 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.5",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1",
-    "jsdom": "^20.0.0",
     "prettier": "^2.7.1",
     "prettier-config-nick": "^1.0.2",
     "typescript": "^4.6.4",
-    "vite": "^3.0.0",
-    "vitest": "^0.23.0"
+    "vite": "^3.0.0"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "prettier": "prettier-config-nick"
 }
