@@ -3,17 +3,10 @@ import {
   Card,
   CardActions,
   CardContent,
-  colors,
   Typography,
 } from "@mui/material"
-import { makeStyles } from "@mui/styles"
 import { useState } from "react"
 import Progress from "./Progress"
-
-const useStyles = makeStyles({
-  bad: { color: colors.red[500] },
-  good: { color: colors.green[500] },
-})
 
 export default function Bisect({
   candidates,
@@ -22,7 +15,6 @@ export default function Bisect({
   candidates: string[]
   reset(): void
 }) {
-  const classes = useStyles()
   const [first, setFirst] = useState(0)
   const [last, setLast] = useState(candidates.length - 1)
 
@@ -50,14 +42,14 @@ export default function Bisect({
         </CardContent>
         <CardActions disableSpacing>
           <Button
-            className={classes.bad}
+            color="error"
             onClick={() => setLast(middle - 1)}
             disabled={!bisecting}
           >
             Bad
           </Button>
           <Button
-            className={classes.good}
+            color="success"
             onClick={() => setFirst(middle + 1)}
             disabled={!bisecting}
           >
