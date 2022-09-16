@@ -7,7 +7,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core"
-import React, { useState } from "react"
+import { useState } from "react"
 import Progress from "./Progress"
 
 const useStyles = makeStyles({

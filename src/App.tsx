@@ -1,6 +1,6 @@
 import { Container, Link, Typography } from "@material-ui/core"
 import { CallSplit } from "@material-ui/icons"
-import React, { useState } from "react"
+import { useState } from "react"
 import "typeface-roboto"
 import Bisect from "./Bisect"
 import SetupForm from "./SetupForm"

@@ -15,9 +15,6 @@ jobs:
       - name: Format
         run: yarn format
 
-      - name: Types
-        run: yarn types
-
       - name: Build
         run: yarn build
 

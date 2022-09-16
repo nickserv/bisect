@@ -1,5 +1,4 @@
 import { LinearProgress, Typography } from "@material-ui/core"
-import React from "react"
 
 function getSteps(length: number) {
   return Math.ceil(Math.log2(length))
