@@ -5,7 +5,7 @@ import {
   CardContent,
   TextField,
   Typography,
-} from "@material-ui/core"
+} from "@mui/material"
 import { useState } from "react"
 
 export default function SetupForm({
@@ -49,6 +49,7 @@ export default function SetupForm({
             candidate.
           </Typography>
           <TextField
+            variant="filled"
             label="Candidates"
             multiline
             fullWidth

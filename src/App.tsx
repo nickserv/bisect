@@ -1,42 +1,47 @@
-import { Container, Link, Typography } from "@material-ui/core"
-import { CallSplit } from "@material-ui/icons"
+import { CallSplit } from "@mui/icons-material"
+import { Container, createTheme, Link, Typography } from "@mui/material"
+import { ThemeProvider } from "@mui/styles"
 import { useState } from "react"
 import "typeface-roboto"
 import Bisect from "./Bisect"
 import SetupForm from "./SetupForm"
 
+const theme = createTheme()
+
 export default function App() {
   const [candidates, setCandidates] = useState<string[]>()
 
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" component="h1">
-        <CallSplit /> Bisect
-      </Typography>
-      <Typography gutterBottom>
-        An interactive GUI for binary searches. Inspired by{" "}
-        <Link href="https://git-scm.com/docs/git-bisect">
-          <code>git bisect</code>
-        </Link>
-        .
-      </Typography>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <Typography variant="h4" component="h1">
+          <CallSplit /> Bisect
+        </Typography>
+        <Typography gutterBottom>
+          An interactive GUI for binary searches. Inspired by{" "}
+          <Link href="https://git-scm.com/docs/git-bisect">
+            <code>git bisect</code>
+          </Link>
+          .
+        </Typography>
 
-      {candidates ? (
-        <Bisect
-          candidates={candidates}
-          reset={() => setCandidates(undefined)}
-        />
-      ) : (
-        <SetupForm onSubmit={setCandidates} />
-      )}
+        {candidates ? (
+          <Bisect
+            candidates={candidates}
+            reset={() => setCandidates(undefined)}
+          />
+        ) : (
+          <SetupForm onSubmit={setCandidates} />
+        )}
 
-      <br />
+        <br />
 
-      <Typography>
-        <Link href="https://github.com/nickmccurdy/bisect">
-          Source on GitHub
-        </Link>
-      </Typography>
-    </Container>
+        <Typography>
+          <Link href="https://github.com/nickmccurdy/bisect">
+            Source on GitHub
+          </Link>
+        </Typography>
+      </Container>
+    </ThemeProvider>
   )
 }

@@ -1,4 +1,4 @@
-import { LinearProgress, Typography } from "@material-ui/core"
+import { LinearProgress, Typography } from "@mui/material"
 
 function getSteps(length: number) {
   return Math.ceil(Math.log2(length))
