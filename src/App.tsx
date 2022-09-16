@@ -1,8 +1,9 @@
+import "@fontsource/roboto"
+import "@fontsource/roboto/500.css"
 import { CallSplit } from "@mui/icons-material"
 import { Container, createTheme, Link, Typography } from "@mui/material"
 import { ThemeProvider } from "@mui/styles"
 import { useState } from "react"
-import "typeface-roboto"
 import Bisect from "./Bisect"
 import SetupForm from "./SetupForm"
 
