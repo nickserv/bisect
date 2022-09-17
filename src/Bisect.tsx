@@ -3,10 +3,19 @@ import {
   Card,
   CardActions,
   CardContent,
+  LinearProgress,
   Typography,
 } from "@mui/material"
 import { useState } from "react"
-import Progress from "./Progress"
+
+function getSteps(length: number) {
+  return Math.ceil(Math.log2(length))
+}
+
+function pluralize(word: string, count: number) {
+  const suffix = count === 1 ? "" : "s"
+  return `${count} ${word}${suffix}`
+}
 
 export default function Bisect({
   candidates,
@@ -20,6 +29,9 @@ export default function Bisect({
 
   const bisecting = first <= last
   const middle = Math.floor((first + last) / 2)
+
+  const candidatesCount = candidates.length
+  const currentCandidatesCount = last + 1 - first
 
   return (
     <>
@@ -35,9 +47,27 @@ export default function Bisect({
           <Typography gutterBottom>
             {bisecting ? candidates[middle] : candidates[middle + 1]}
           </Typography>
-          <Progress
-            candidatesCount={candidates.length}
-            currentCandidatesCount={last + 1 - first}
+          <Typography>
+            {currentCandidatesCount ? (
+              <>
+                {pluralize("candidate", currentCandidatesCount)} left to test
+                after this (roughly{" "}
+                {pluralize("step", getSteps(currentCandidatesCount))})
+              </>
+            ) : (
+              "Completed"
+            )}
+          </Typography>
+          <LinearProgress
+            variant="determinate"
+            value={
+              currentCandidatesCount === candidatesCount
+                ? 0
+                : ((getSteps(candidatesCount) -
+                    getSteps(currentCandidatesCount)) /
+                    getSteps(candidatesCount)) *
+                  100
+            }
           />
         </CardContent>
         <CardActions disableSpacing>
