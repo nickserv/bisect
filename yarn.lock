@@ -3280,9 +3280,9 @@ prelude-ls@^1.2.1:
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
 prettier-config-nick@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/prettier-config-nick/-/prettier-config-nick-1.0.2.tgz#90f00435f59dc4b36d851c09ce0590f34efc43f1"
-  integrity sha512-A7/U4Y6Zhn8pTo7YTG3YYXnCxsTWBMEYI06ofeqkuQGDee+RGRqMIRTqO0Msck7Pa3kuBmvfGCHteED5zfmNkg==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/prettier-config-nick/-/prettier-config-nick-1.0.7.tgz#865c666f143be5830f3442145ff2695f4e10f49b"
+  integrity sha512-VtpBK5Uz0LaUpMe8nYep/RsT648GSCP52TbeiYc91MVsa/8zoNeZ0Zfky34OPG8Z9jFhNpoLgHnOXhUc7+rMCA==
 
 prettier@^2.7.1:
   version "2.7.1"
