@@ -9,8 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Corepack
+        run: corepack enable
+
       - name: Install
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
 
       - name: Format
         run: yarn format
